@@ -1,0 +1,25 @@
+{
+  "name": "sometalk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praytyushpande/sometalk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/praytyushpande/sometalk/issues"
+  },
+  "homepage": "https://github.com/praytyushpande/sometalk#readme",
+  "dependencies": {
+    "@google/genai": "^1.50.1",
+    "dotenv": "^17.4.2"
+  }
+}
