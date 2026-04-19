@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SomeTalk — You're Not Alone</title>
+  <meta name="description" content="SomeTalk is a safe, anonymous mental health community with 24/7 AI emotional support. Share your story, connect with others, and talk to Aria — your empathetic AI companion." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════ NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="logo-btn" onclick="showSection('home')">
+        <span class="logo-text">SomeTalk</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#" class="nav-link" id="nav-home" onclick="showSection('home')">Home</a>
+        <a href="#" class="nav-link" id="nav-feed" onclick="showSection('feed')">Community</a>
+        <a href="#" class="nav-link" id="nav-chat" onclick="showSection('chat')">Talk to Aria</a>
+        <a href="#" class="nav-link nav-crisis" id="crisis-nav-btn" onclick="showCrisisModal()">Crisis Help</a>
+      </div>
+      <button class="nav-cta" id="join-btn" onclick="showSection('feed')">Join Community</button>
+      <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════ HOME SECTION -->
+  <section class="section active" id="section-home">
+
+    <!-- Subtle background gradient container -->
+    <div class="mesh-bg"></div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Safe · Anonymous · Always Here
+      </div>
+      <h1 class="hero-title">
+        You don't have to carry this alone.
+      </h1>
+      <p class="hero-subtitle">
+        SomeTalk is a judgment-free space where you can share your story anonymously,
+        connect with people who truly understand, and talk to Aria — your 24/7 AI companion.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="hero-community-btn" onclick="showSection('feed')">
+          <span>Join Community</span>
+        </button>
+        <button class="btn btn-ghost" id="hero-chat-btn" onclick="showSection('chat')">
+          <span>Talk to Aria</span>
+          <span class="btn-badge">AI</span>
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">12k+</span>
+          <span class="stat-label">Stories shared</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">24/7</span>
+          <span class="stat-label">AI support</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Anonymous</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works Section (NEW) -->
+    <div class="how-it-works-section">
+      <p class="section-eyebrow">The Journey</p>
+      <h2 class="section-title">A safe space designed for healing.</h2>
+      
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Share Anonymously</h3>
+          <p>Pour your heart out without the fear of judgment. No profiles, no names, just your authentic thoughts shared with a community that listens.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Connect & Relate</h3>
+          <p>Find comfort in knowing others feel exactly how you do. Give and receive empathy through thoughtful, genuine interactions.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Talk to Aria</h3>
+          <p>When the community is quiet, Aria is always awake. Process your emotions with an empathetic AI trained to support you anytime.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mental Health Matters Section (NEW) -->
+    <div class="mental-health-section">
+      <div class="mh-grid">
+        <div class="mh-content">
+          <h2>Why Mental Health Matters</h2>
+          <p>In a hyper-connected world, <strong>we have never felt more isolated.</strong> Millions suffer in silence, believing their struggles are unique and their burdens too heavy to share.</p>
+          <p>SomeTalk was built on a simple premise: <strong>healing begins when you are heard.</strong> By removing identity, we remove judgment. We strip away the pressure of performing for social media, leaving only genuine human connection.</p>
+          <p>Whether you're processing grief, managing anxiety, or just need someone to sit with you in the dark — your feelings are valid, and you belong here.</p>
+        </div>
+        <div class="mh-stats">
+          <div class="mh-stats-grid">
+            <div class="mh-stat-card">
+              <span class="mh-stat-number">1 in 8</span>
+              <span class="mh-stat-desc">People globally live with a mental disorder.</span>
+            </div>
+            <div class="mh-stat-card">
+              <span class="mh-stat-number">60%</span>
+              <span class="mh-stat-desc">Do not seek help due to stigma or cost.</span>
+            </div>
+            <div class="mh-stat-card">
+              <span class="mh-stat-number">24/7</span>
+              <span class="mh-stat-desc">Access to empathetic listeners changes outcomes.</span>
+            </div>
+            <div class="mh-stat-card">
+              <span class="mh-stat-number">∞</span>
+              <span class="mh-stat-desc">The power of simply being understood.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features-section">
+      <p class="section-eyebrow">Core Experiences</p>
+      <h2 class="section-title">Everything you need, nothing that judges.</h2>
+      <div class="features-grid">
+        <div class="feature-card" onclick="showSection('feed')">
+          <div class="feature-icon" style="color: var(--sage)">🫂</div>
+          <h3>Community Feed</h3>
+          <p>Read stories from people who feel exactly like you. React with empathy, not algorithms.</p>
+          <span class="feature-link">Explore →</span>
+        </div>
+        <div class="feature-card featured" onclick="showSection('chat')">
+          <div class="feature-badge-card">Always Awake</div>
+          <div class="feature-icon" style="color: var(--accent)">✨</div>
+          <h3>Talk to Aria</h3>
+          <p>Aria is your AI companion. Available 24/7 to listen, support, and guide you through tough moments.</p>
+          <span class="feature-link">Start chatting →</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="color: var(--blue)">🔒</div>
+          <h3>Fully Anonymous</h3>
+          <p>No real names. No profile pictures. Just honest human connection. Your privacy is our first principle.</p>
+          <span class="feature-link">Learn more →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonials-section">
+      <p class="section-eyebrow">From our community</p>
+      <h2 class="section-title">Real words, real healing.</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-mood mood-anxious">Anxiety</div>
+          <p>"I posted at 2am when I couldn't sleep. Within minutes, people responded with so much warmth. I felt less alone instantly."</p>
+          <span class="testimonial-author">— Anonymous</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-mood mood-hopeful">Hopeful</div>
+          <p>"Aria helped me reframe my thoughts when I was spiraling. It's not a replacement for therapy but it got me through the night."</p>
+          <span class="testimonial-author">— Anonymous</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-mood mood-sad">Processing grief</div>
+          <p>"This community doesn't give hollow advice. They just listen. That's all I needed — to be heard."</p>
+          <span class="testimonial-author">— Anonymous</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Crisis Banner -->
+    <div class="crisis-section">
+      <div class="crisis-card">
+        <div class="crisis-left">
+          <span class="crisis-icon">🆘</span>
+          <div>
+            <h3>Are you in crisis right now?</h3>
+            <p>If you're having thoughts of self-harm, please reach out immediately. Help is available 24/7.</p>
+          </div>
+        </div>
+        <button class="btn btn-crisis" id="crisis-home-btn" onclick="showCrisisModal()">Get Immediate Help</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-text">SomeTalk</span>
+        </div>
+        <p class="footer-tagline">A safe space for every mind.</p>
+        <p class="footer-disclaimer">SomeTalk is not a substitute for professional mental health care. In a crisis, please call iCall: <strong>9152987821</strong> or Vandrevala Foundation: <strong>1860-2662-345</strong></p>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Safety</a>
+          <a href="#">Contact</a>
+        </div>
+        <p class="footer-copy">© 2025 SomeTalk. Made with empathy.</p>
+      </div>
+    </footer>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ FEED SECTION -->
+  <section class="section" id="section-feed">
+
+    <div class="mesh-bg"></div>
+
+    <div class="feed-container">
+      <!-- Feed Header -->
+      <div class="feed-header">
+        <div class="feed-header-text">
+          <h1>Community Feed</h1>
+          <p>Anonymous stories, shared with empathy. You belong here.</p>
+        </div>
+        <button class="btn btn-primary" id="share-story-btn" onclick="openPostModal()">
+          Share Your Story
+        </button>
+      </div>
+
+      <!-- Crisis pinned -->
+      <div class="crisis-pin">
+        <span>🆘</span>
+        <span>In crisis? Reach iCall: <strong>9152987821</strong> · Vandrevala: <strong>1860-2662-345</strong></span>
+        <button class="crisis-pin-btn" id="crisis-feed-btn" onclick="showCrisisModal()">Get Help Now</button>
+      </div>
+
+      <!-- Mood Filters -->
+      <div class="mood-filters" id="mood-filters">
+        <button class="mood-chip active" id="filter-all" onclick="filterPosts('all', this)">All Stories</button>
+        <button class="mood-chip" id="filter-anxious" onclick="filterPosts('anxious', this)">😰 Anxious</button>
+        <button class="mood-chip" id="filter-sad" onclick="filterPosts('sad', this)">😔 Sad</button>
+        <button class="mood-chip" id="filter-hopeful" onclick="filterPosts('hopeful', this)">🌱 Hopeful</button>
+        <button class="mood-chip" id="filter-overwhelmed" onclick="filterPosts('overwhelmed', this)">🌊 Overwhelmed</button>
+        <button class="mood-chip" id="filter-recovering" onclick="filterPosts('recovering', this)">✨ Recovering</button>
+        <button class="mood-chip" id="filter-lonely" onclick="filterPosts('lonely', this)">🌙 Lonely</button>
+      </div>
+
+      <!-- Posts Grid -->
+      <div class="posts-grid" id="posts-grid"></div>
+
+    </div>
+
+    <!-- Post Modal -->
+    <div class="modal-overlay" id="post-modal" onclick="closePostModalOutside(event)">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" id="close-post-modal" onclick="closePostModal()">×</button>
+        <h2 id="modal-title">Share Your Story</h2>
+        <p class="modal-subtitle">You're completely anonymous. No one will know who you are.</p>
+        <div class="modal-body">
+          <label class="form-label">How are you feeling?</label>
+          <div class="mood-select-grid" id="mood-select-grid">
+            <button class="mood-select-btn" id="mood-anxious" data-mood="anxious" onclick="selectMood('anxious', this)">😰 Anxious</button>
+            <button class="mood-select-btn" id="mood-sad" data-mood="sad" onclick="selectMood('sad', this)">😔 Sad</button>
+            <button class="mood-select-btn" id="mood-hopeful" data-mood="hopeful" onclick="selectMood('hopeful', this)">🌱 Hopeful</button>
+            <button class="mood-select-btn" id="mood-overwhelmed" data-mood="overwhelmed" onclick="selectMood('overwhelmed', this)">🌊 Overwhelmed</button>
+            <button class="mood-select-btn" id="mood-recovering" data-mood="recovering" onclick="selectMood('recovering', this)">✨ Recovering</button>
+            <button class="mood-select-btn" id="mood-lonely" data-mood="lonely" onclick="selectMood('lonely', this)">🌙 Lonely</button>
+          </div>
+          <label class="form-label" for="post-content">What's on your mind?</label>
+          <textarea id="post-content" class="form-textarea" placeholder="Share whatever feels right. No judgment here..." rows="5" maxlength="600"></textarea>
+          <div class="char-counter"><span id="char-count">0</span>/600</div>
+          <div class="form-safety">
+            <span>🔒</span>
+            <span>Your post is 100% anonymous. We never store personal data.</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-ghost-sm" id="cancel-post-btn" onclick="closePostModal()">Cancel</button>
+          <button class="btn btn-primary" id="submit-post-btn" onclick="submitPost()">Post Anonymously</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ CHAT SECTION -->
+  <section class="section" id="section-chat">
+
+    <div class="mesh-bg"></div>
+
+    <div class="chat-layout">
+      <!-- Sidebar -->
+      <aside class="chat-sidebar">
+        <div class="aria-profile">
+          <div class="aria-avatar">
+            <span>✨</span>
+            <div class="aria-status-dot"></div>
+          </div>
+          <div class="aria-info">
+            <h3>Aria</h3>
+            <p>Your AI Companion</p>
+          </div>
+        </div>
+        <div class="aria-desc">
+          <p>Aria is here to listen without judgment. She can help you process emotions, calm anxiety, and guide you to resources.</p>
+        </div>
+        <div class="conversation-starters">
+          <p class="starters-label">Start with…</p>
+          <button class="starter-btn" id="starter-1" onclick="sendStarter(this)">I'm feeling anxious today</button>
+          <button class="starter-btn" id="starter-2" onclick="sendStarter(this)">I can't sleep and I'm spiraling</button>
+          <button class="starter-btn" id="starter-3" onclick="sendStarter(this)">I just need someone to talk to</button>
+          <button class="starter-btn" id="starter-4" onclick="sendStarter(this)">Help me with a breathing exercise</button>
+          <button class="starter-btn" id="starter-5" onclick="sendStarter(this)">I'm feeling really low today</button>
+        </div>
+        <div class="sidebar-crisis">
+          <span>🆘</span>
+          <div>
+            <strong>In crisis?</strong>
+            <p>iCall: 9152987821</p>
+          </div>
+          <button id="sidebar-crisis-btn" onclick="showCrisisModal()">→</button>
+        </div>
+      </aside>
+
+      <!-- Chat Window -->
+      <div class="chat-window">
+        <div class="chat-header">
+          <div class="chat-header-info">
+            <div class="aria-avatar-sm">✨</div>
+            <div>
+              <h3>Aria</h3>
+              <span class="online-status">
+                <span class="aria-status-dot-sm"></span>
+                Online · Always here for you
+              </span>
+            </div>
+          </div>
+          <button class="chat-clear-btn" id="clear-chat-btn" onclick="clearChat()">Clear chat</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+          <!-- Messages injected by JS -->
+        </div>
+
+        <div class="chat-input-area">
+          <div class="chat-input-wrapper">
+            <textarea
+              id="chat-input"
+              class="chat-textarea"
+              placeholder="Tell Aria how you're feeling…"
+              rows="1"
+              onkeydown="handleChatKey(event)"
+              oninput="autoResizeTextarea(this)"
+            ></textarea>
+            <button class="send-btn" id="send-btn" onclick="sendMessage()">
+              ↗
+            </button>
+          </div>
+          <p class="chat-disclaimer">Aria is an AI and not a licensed therapist. In emergencies, please call a crisis line.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ CRISIS MODAL -->
+  <div class="modal-overlay" id="crisis-modal" onclick="closeCrisisModalOutside(event)">
+    <div class="modal crisis-modal-inner" role="dialog" aria-modal="true" aria-labelledby="crisis-title">
+      <button class="modal-close" id="close-crisis-modal" onclick="closeCrisisModal()">×</button>
+      <div class="crisis-modal-header">
+        <div class="crisis-modal-icon">🆘</div>
+        <h2 id="crisis-title">You matter. Help is here.</h2>
+        <p>If you're in immediate danger, please call emergency services. Below are 24/7 crisis resources:</p>
+      </div>
+      <div class="crisis-resources">
+        <a class="crisis-resource-card" href="tel:9152987821" id="icall-link">
+          <div class="resource-icon">📞</div>
+          <div>
+            <strong>iCall</strong>
+            <span>9152987821</span>
+            <small>Mon–Sat, 8am–10pm</small>
+          </div>
+        </a>
+        <a class="crisis-resource-card" href="tel:18602662345" id="vandrevala-link">
+          <div class="resource-icon">💙</div>
+          <div>
+            <strong>Vandrevala Foundation</strong>
+            <span>1860-2662-345</span>
+            <small>24/7 · Free</small>
+          </div>
+        </a>
+        <a class="crisis-resource-card" href="tel:104" id="snehi-link">
+          <div class="resource-icon">🫂</div>
+          <div>
+            <strong>SNEHI</strong>
+            <span>044-24640050</span>
+            <small>Daily, 8am–10pm</small>
+          </div>
+        </a>
+        <a class="crisis-resource-card" href="tel:112" id="emergency-link">
+          <div class="resource-icon">🚨</div>
+          <div>
+            <strong>Emergency Services</strong>
+            <span>112</span>
+            <small>Immediate danger</small>
+          </div>
+        </a>
+      </div>
+      <button class="btn btn-primary" style="width:100%;margin-top:12px" id="close-crisis-ok" onclick="closeCrisisModal()">I'm okay, go back</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/feed.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
