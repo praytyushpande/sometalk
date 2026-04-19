@@ -23,6 +23,7 @@
       <div class="nav-links" id="nav-links">
         <a href="#" class="nav-link" id="nav-home" onclick="showSection('home')">Home</a>
         <a href="#" class="nav-link" id="nav-feed" onclick="showSection('feed')">Community</a>
+        <a href="#" class="nav-link" id="nav-therapists" onclick="showSection('therapists')">Find a Therapist</a>
         <a href="#" class="nav-link" id="nav-chat" onclick="showSection('chat')">Talk to Aria</a>
         <a href="#" class="nav-link nav-crisis" id="crisis-nav-btn" onclick="showCrisisModal()">Crisis Help</a>
       </div>
@@ -369,7 +370,34 @@
         </div>
       </div>
     </div>
+  </section>
 
+  <!-- ═══════════════════════════════════════════════════════ THERAPISTS SECTION -->
+  <section class="section" id="section-therapists">
+    <div class="mesh-bg"></div>
+    <div class="therapists-container">
+      <div class="therapists-header">
+        <div class="therapists-header-text">
+          <h1>Professional Support</h1>
+          <p>Connect with licensed therapists. SomeTalk users receive an exclusive <strong style="color: var(--accent);">10% student discount</strong>.</p>
+        </div>
+        
+        <div class="therapists-filters">
+          <label for="location-filter">Location</label>
+          <select id="location-filter" onchange="filterTherapists(this.value)">
+            <option value="all">All Locations</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="delhi">Delhi</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="online">Online / Telehealth</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="therapists-grid" id="therapists-grid">
+        <!-- Injected via JS -->
+      </div>
+    </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════ CRISIS MODAL -->
@@ -424,6 +452,7 @@
 
   <script src="js/feed.js"></script>
   <script src="js/chatbot.js"></script>
+  <script src="js/therapists.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

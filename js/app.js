@@ -31,6 +31,11 @@ function showSection(name) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  if (name === 'therapists') {
+    if (typeof initTherapists === 'function') initTherapists();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   if (name === 'chat') {
     if (!chatInitialized) {
       initChat();
